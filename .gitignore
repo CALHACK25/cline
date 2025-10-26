@@ -1,37 +1,49 @@
+# Build output
 out
 dist
 dist-standalone
-node_modules
-tmp
-.vscode-test/
 *.vsix
 
-.DS_Store
-.idea
-
+# Dependencies
+node_modules
 pnpm-lock.yaml
 
-.clineignore
+# Temporary files
+tmp
+*.log
+
+# IDE and Editor
+.vscode-test/
+.DS_Store
+.idea
+.vscode
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+*evals.env
+
+# Python
 .venv
+__pycache__/
+*.py[cod]
+
+# Config files
+.clineignore
 .actrc
 
+# Generated files
 webview-ui/src/**/*.js
 webview-ui/src/**/*.js.map
+src/generated/
+src/shared/proto/
+webview-ui/src/services/grpc-client.ts
 
-# Ignore coverage directories and files
+# Testing
+test-results
 coverage
 coverage-unit
 .nyc_output
 # But don't ignore the coverage scripts in .github/scripts/
 !.github/scripts/coverage/
-
-*evals.env
-.env
-
-## Generated files ##
-src/generated/
-src/shared/proto/
-webview-ui/src/services/grpc-client.ts
-
-# E2E Tests
-test-results
